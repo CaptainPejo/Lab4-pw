@@ -48,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
         ListView listview = (ListView) findViewById(R.id.listView);
         listview.setAdapter(this.adapter);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int pos, long id)
             {
@@ -57,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
                 Animal zwierz = db.pobierz(Integer.parseInt(name.getText().toString()));
                 Intent intencja = new Intent(getApplicationContext(),DodajWpis.class);
                 intencja.putExtra("element", zwierz);
-                startActivityForResult(intencja,2);
+                startActivityForResult(intencja, 2);
+
             }
         });
 
