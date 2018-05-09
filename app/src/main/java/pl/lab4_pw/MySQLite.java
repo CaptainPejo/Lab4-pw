@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by PW on 2018-04-16.
@@ -44,6 +45,7 @@ public class MySQLite extends SQLiteOpenHelper {
         values.put("opis", zwierz.getOpis());
 
         db.insert("animals", null, values);
+        Log.d("debug", zwierz.getGatunek());
         db.close();
     }
 

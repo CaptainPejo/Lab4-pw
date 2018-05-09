@@ -13,11 +13,15 @@ public class Animal implements Serializable {
     private float wielkosc;
     private String opis;
 
-    public Animal(String string, String cursorString, float aFloat, String s) {
-        this.gatunek = gatunek;
-        this.kolor = kolor;
-        this.wielkosc = wielkosc;
-        this.opis = opis;
+    public Animal(){}
+
+    public Animal(String gatunek, String kolor, float wielkosc, String opis)
+    {
+        super();
+        this.gatunek=gatunek;
+        this.kolor=kolor;
+        this.wielkosc=wielkosc;
+        this.opis=opis;
     }
 
     @Override
@@ -26,9 +30,7 @@ public class Animal implements Serializable {
                 " wielkosc=" + wielkosc+" ]";
     }
 
-    public int get_id() {
-        return _id;
-    }
+
 
     public String getGatunek() {
         return gatunek;
@@ -48,5 +50,8 @@ public class Animal implements Serializable {
 
     public void set_id(int _id) {
         this._id = _id;
+    }
+    public int get_id() {
+        return _id;
     }
 }
